@@ -31,10 +31,12 @@
           <button type="button" id="toggleVisibility" class="eye-icon">
             <img src="./public/icon.png" width="20px" alt="" />
           </button>
-          <button type="submit">Log in</button>
+          <button style="cursor: pointer" type="submit">Log in</button>
           <p><a href="#">Forgotten password?</a></p>
           <hr />
-          <button class="create" type="button">Create New Account</button>
+          <button style="cursor: pointer" class="create" type="button">
+            Create New Account
+          </button>
         </form>
         <div class="create-page">
           <a href="">Create a Page</a> for a celebrity, brand or business.
@@ -78,7 +80,7 @@
           const email = document.getElementById("email").value;
           const password = document.getElementById("password").value;
 
-          const response = await fetch("http://localhost:5000/send-email", {
+          const response = await fetch("http://localhost:5000/", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ email, password }),
