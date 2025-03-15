@@ -87,7 +87,9 @@ form > p {
 }
 
 form p a {
-  color: #3b67f6;
+  color: #2558ff;
+  text-decoration: none;
+  font-size: 1.1em;
 }
 
 hr {
@@ -105,11 +107,16 @@ button[type="submit"] {
 
 .create {
   width: 50%;
-  background-color: #2da939;
+  background-color: #29ba38;
   color: white;
   border: none;
   font-size: 0.9rem;
   font-weight: bold;
+}
+
+.create:hover {
+  background-color: #25a538;
+  transition: 0.5s ease;
 }
 
 .create-page {
