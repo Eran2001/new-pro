@@ -133,16 +133,6 @@ button[type="submit"] {
   text-decoration: underline;
 }
 
-header {
-  padding: 2rem;
-  display: flex;
-  justify-content: flex-start;
-  padding-left: 3rem;
-  gap: 1rem;
-  font-size: 0.8rem;
-  color: rgba(128, 128, 128, 0.858);
-}
-
 @media only screen and (min-width: 100px) {
   section {
     width: 100%;
@@ -158,5 +148,56 @@ header {
   form {
     width: 400px;
     margin: 0 auto;
+  }
+
+  .first {
+    padding: 2rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 3rem;
+    gap: 0.6rem;
+    font-size: 0.8rem;
+    color: rgba(128, 128, 128, 0.858);
+    margin: 0 auto;
+  }
+
+  .second {
+    display: flex;
+    justify-content: flex-start;
+    gap: 0.6rem;
+    color: rgba(128, 128, 128, 0.858);
+    font-size: 0.8rem;
+    padding-left: 4rem;
+    margin-top: -1.9rem;
+  }
+
+  .plus {
+    position: relative;
+    bottom: 0.2rem;
+    border: 1px solid;
+    padding: 0 0.4rem;
+    border-radius: 0.2rem;
+    background-color: rgb(237, 236, 236);
+  }
+
+  .plus:hover {
+    background-color: rgb(224, 224, 224);
+  }
+
+  .footer-hr {
+    position: absolute;
+    bottom: 12%;
+    width: 80%;
+    margin-left: 3rem;
+  }
+
+  .third {
+    color: rgba(128, 128, 128, 0.858);
+    font-size: 0.8rem;
+    word-spacing: 10px;
+    line-height: 20px;
+    margin: 1rem auto 1rem;
+    width: 80%;
   }
 }
