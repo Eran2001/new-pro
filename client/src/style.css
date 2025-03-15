@@ -92,6 +92,10 @@ form p a {
   font-size: 1.1em;
 }
 
+form p a:hover {
+  text-decoration: underline;
+}
+
 hr {
   width: 100%;
   margin: 1rem 0;
@@ -105,17 +109,23 @@ button[type="submit"] {
   font-weight: bold;
 }
 
+button[type="submit"]:hover {
+  background-color: #3582e7;
+  transition: 0.5s ease;
+}
+
 .create {
-  width: 50%;
-  background-color: #29ba38;
+  width: 55%;
+  background-color: #0fb11f;
   color: white;
   border: none;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: bold;
+  margin-top: 0.7rem;
 }
 
 .create:hover {
-  background-color: #25a538;
+  background-color: #209a33;
   transition: 0.5s ease;
 }
 
@@ -199,5 +209,11 @@ button[type="submit"] {
     line-height: 20px;
     margin: 1rem auto 1rem;
     width: 80%;
+  }
+
+  .fourth {
+    color: rgba(1, 1, 1, 0.858);
+    font-size: 0.7rem;
+    margin: 2rem 3rem 1rem;
   }
 }
