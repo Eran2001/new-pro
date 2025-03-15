@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+}
+
+section {
+  display: flex;
+  min-height: 78vh;
+  background-color: rgb(245, 244, 244);
+  justify-content: space-around;
+  align-items: center;
+}
+
+main {
+  margin-bottom: 12rem;
+}
+
+main > h1 {
+  color: #3b67f6;
+  font-size: 3.7rem;
+  margin-bottom: 0.6rem;
+}
+
+main > p {
+  font-size: 1.5rem;
+  width: 30ch;
+}
+
+form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 30vh;
+  width: 40%;
+  border: 1px solid;
+  padding: 1rem;
+  align-items: center;
+  margin-right: 0.7rem;
+  margin-bottom: 8rem;
+  border: none;
+  background-color: white;
+  box-shadow: 2px 2px 10px #aaaaaa;
+  border-radius: 0.5rem;
+}
+
+.eye-icon {
+  position: absolute;
+  left: 38%;
+  top: 32%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  display: none;
+}
+
+form input,
+form button {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  border-radius: 0.4rem;
+}
+
+input {
+  border: 1px solid #d1d1d1;
+  font-size: 1rem;
+  caret-color: #3b67f6;
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid #3b67f6;
+}
+
+input::placeholder {
+  opacity: 0.6;
+  color: rgba(77, 77, 77, 0.9);
+  font-size: 1rem;
+}
+
+form > p {
+  font-size: 0.8rem;
+}
+
+form p a {
+  color: #3b67f6;
+}
+
+hr {
+  width: 100%;
+  margin: 1rem 0;
+}
+
+button[type="submit"] {
+  border: none;
+  color: #fff;
+  background-color: #2558ff;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.create {
+  width: 50%;
+  background-color: #2da939;
+  color: white;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.create-page {
+  margin-top: -4rem;
+}
+
+.create-page > a {
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.create-page > a:hover {
+  text-decoration: underline;
+}
+
+@media only screen and (min-width: 100px) {
+  section {
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  main {
+    text-align: center;
+    margin: -4rem auto -4rem;
+  }
+
+  form {
+    width: 400px;
+    margin: 0 auto;
+  }
+}
