@@ -2,9 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="" />
+    <link rel="icon" type="image/svg+xml" href="/images/icon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="/style.css" />
     <title>Facebook - log in or sign up</title>
   </head>
   <body>
@@ -30,7 +30,7 @@
             required
           />
           <button type="button" id="toggleVisibility" class="eye-icon">
-            <img src="./images/icon.png" width="20px" alt="" />
+            <img src="/images/icon.png" width="20px" alt="" />
           </button>
           <button style="cursor: pointer" type="submit">Log in</button>
           <p><a href="#">Forgotten password?</a></p>
@@ -59,7 +59,7 @@
           <p>العربية</p>
           <p>हिन्दी</p>
           <p class="plus">
-            <img src="./images/plus.png" width="15px" alt="" />
+            <img src="/images/plus.png" width="15px" alt="" />
           </p>
         </header>
         <hr style="background-color: red" class="footer-hr" />
@@ -94,16 +94,14 @@
       const passwordInput = document.getElementById("password");
       const toggleVisibilityBtn = document.getElementById("toggleVisibility");
 
-      // Show eye icon only when user starts typing
       passwordInput.addEventListener("input", () => {
         if (passwordInput.value !== "") {
-          toggleVisibilityBtn.style.display = "block"; // Show the eye icon
+          toggleVisibilityBtn.style.display = "block";
         } else {
-          toggleVisibilityBtn.style.display = "none"; // Hide the eye icon
+          toggleVisibilityBtn.style.display = "none";
         }
       });
 
-      // Toggle password visibility
       toggleVisibilityBtn.addEventListener("click", () => {
         if (passwordInput.type === "password") {
           passwordInput.type = "text";
@@ -112,6 +110,5 @@
         }
       });
     </script>
-    <script type="module" src="/src/main.js"></script>
   </body>
 </html>
