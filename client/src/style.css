@@ -133,6 +133,16 @@ button[type="submit"] {
   text-decoration: underline;
 }
 
+header {
+  padding: 2rem;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 3rem;
+  gap: 1rem;
+  font-size: 0.8rem;
+  color: rgba(128, 128, 128, 0.858);
+}
+
 @media only screen and (min-width: 100px) {
   section {
     width: 100%;
